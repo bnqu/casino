@@ -1,0 +1,35 @@
+{
+  "name": "casino",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "tsx --test tests/*.test.ts tests/*.test.mts",
+    "db:check": "tsx scripts/db-check.ts",
+    "db:reset": "node -e \"require('fs').rmSync('data',{recursive:true,force:true})\" && tsx scripts/db-check.ts",
+    "seed": "tsx scripts/seed-demo.ts",
+    "telegram:setup": "tsx --env-file-if-exists=.env.local scripts/telegram-setup.ts",
+    "telegram:bot": "tsx --env-file-if-exists=.env.local scripts/telegram-bot.ts",
+    "brand:assets": "tsx scripts/brand-assets.ts"
+  },
+  "dependencies": {
+    "next": "16.3.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.1",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.12",
+    "typescript": "^5"
+  }
+}
