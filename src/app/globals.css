@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0f172a;
+  --color-muted: #64748b;
+  --color-line: #e2e8f0;
+  --color-brand: #0f766e;
+  --color-brand-soft: #ccfbf1;
+  --color-warn: #b45309;
+  --color-risk: #b91c1c;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  color: var(--color-ink);
+}
+
+.card {
+  @apply rounded-2xl border border-line bg-white p-5 shadow-sm;
+}
+.label {
+  @apply text-xs font-medium uppercase tracking-wide text-muted;
+}
+.input {
+  @apply w-full rounded-lg border border-line bg-white px-3 py-2 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand-soft;
+}
+.btn {
+  @apply inline-flex items-center justify-center rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white hover:opacity-90;
+}
+.btn-ghost {
+  @apply inline-flex items-center justify-center rounded-lg border border-line bg-white px-4 py-2 text-sm font-medium hover:bg-slate-50;
+}
+.chip {
+  @apply inline-flex items-center rounded-full border border-line px-2.5 py-0.5 text-xs;
+}
+.num {
+  font-variant-numeric: tabular-nums;
+}
